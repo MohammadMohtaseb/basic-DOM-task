@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    img {
+      width: 400px;
+      height: auto;
+    }
+  </style>
+</head>
+<body>
+  <select name="" id="country-s">
+    <option value="norway">Norway</option>
+    <option value="sweden">Sweden</option>
+    <option value="denmark">Denmark</option>
+  </select>
+  <div>
+    <img id="flag-image" src="images/Flag-Norway.webp" alt="country flag">
+  </div>
+
+  <script>
+    let selectElement = document.getElementById('country-s');
+    let imageElement = document.getElementById('flag-image');
+
+    selectElement.addEventListener('change', function() {
+      let selectedCountry = selectElement.value;
+
+      if (selectedCountry === 'norway') {
+        imageElement.src = "images/Flag-Norway.webp";
+      } else if (selectedCountry === 'sweden') {
+        imageElement.src = 'images/Flag-Sweden.webp';
+      } else if (selectedCountry === 'denmark') {
+        imageElement.src = 'images/denmark-country-flag.webp';
+      }
+    });
+  </script>
+</body>
+</html>
